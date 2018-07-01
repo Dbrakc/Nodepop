@@ -6,24 +6,13 @@ const router = express.Router();
 const Ad = require('../../models/Ad');
 
 
-router.get("/",(req,res,next)=>{
-    const ad = new Ad({
-        name: 'name1',
-        status: 'sell',
-        price : 12.5,
-        photo: '../../images/photo1.jpg',
-        tags: ['work','lifestyle']
-    });
-    
-     ad.save(((err, adCreado)=>{
-         if(err){
-             next(err);
-             return;
-         }
-         console.log(adCreado);
-         res.send('ok');
-
-     }));
+router.get("/",async (req,res,next)=>{
+    try{
+    const ads = await Ad.list();
+    res.json({ succes: true, result: ads});
+    }catch(err){
+        next(err);
+    }   
 });
 
 module.exports = router;

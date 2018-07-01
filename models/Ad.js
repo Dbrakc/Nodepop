@@ -12,6 +12,11 @@ const adSchema = mongoose.Schema({
     tags: {type: [String], enum: ['work','lifestyle','motor','mobile']}
 }); 
 
+adSchema.statics.list= function (){
+    const query = Ad.find();
+    return query.exec();
+};
+
 
 
 

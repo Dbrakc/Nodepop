@@ -12,8 +12,9 @@ const adSchema = mongoose.Schema({
     tags: {type: [String], enum: ['work','lifestyle','motor','mobile']}
 }); 
 
-adSchema.statics.list= function (filter){
+adSchema.statics.list= function (filter,skip){
     const query = Ad.find(filter);
+    query.skip(skip);
     return query.exec();
 };
 

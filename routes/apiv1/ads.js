@@ -20,6 +20,7 @@ router.get("/",async (req,res,next)=>{
         const tags = req.query.tags;
         const skip = parseInt(req.query.skip);
         const limit = parseInt(req.query.limit);
+        const fields = req.query.fields;
         
         const filter = {};
         if(name){
@@ -39,7 +40,7 @@ router.get("/",async (req,res,next)=>{
         }
 
 
-        const ads = await Ad.list(filter,skip,limit);
+        const ads = await Ad.list(filter,skip,limit,fields);
         res.json({ succes: true, result: ads});
     }catch(err){
         next(err);

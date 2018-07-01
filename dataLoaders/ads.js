@@ -8,7 +8,7 @@ module.exports = {
             name: 'ad1',
             status: 'sell',
             price : 12.5,
-            foto: '../../images/photo1.jpg',
+            photo: '../../images/photo1.jpg',
             tags: ['work','lifestyle']
         },
         {

@@ -19,6 +19,7 @@ router.get("/",async (req,res,next)=>{
         const minPrice = req.query.minPrice || 0;
         const tags = req.query.tags;
         const skip = parseInt(req.query.skip);
+        const limit = parseInt(req.query.limit);
         
         const filter = {};
         if(name){
@@ -38,7 +39,7 @@ router.get("/",async (req,res,next)=>{
         }
 
 
-        const ads = await Ad.list(filter,skip);
+        const ads = await Ad.list(filter,skip,limit);
         res.json({ succes: true, result: ads});
     }catch(err){
         next(err);

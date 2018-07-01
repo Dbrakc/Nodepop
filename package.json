@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "cross-env DEBUG=Nodepop:* nodemon ./bin/www "
+    "dev": "cross-env DEBUG=Nodepop:* nodemon ./bin/www ",
+    "install_db": "node ./bin/installDb"
   },
   "dependencies": {
+    "async": "^2.6.1",
     "cookie-parser": "~1.4.3",
     "cross-env": "^5.2.0",
     "debug": "~2.6.9",

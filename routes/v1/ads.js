@@ -10,8 +10,8 @@ router.get("/",(req,res,next)=>{
     const ad = new Ad({
         name: 'name1',
         status: 'sell',
-        precio : 12.5,
-        foto: '../../images/photo1.jpg',
+        price : 12.5,
+        photo: '../../images/photo1.jpg',
         tags: ['work','lifestyle']
     });
     

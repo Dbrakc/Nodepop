@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', require('./routes/index'));
 app.use('/users', require('./routes/users'));
-app.use('/v1/ads', require('./routes/v1/ads'));
+app.use('/apiv1/ads', require('./routes/apiv1/ads'));
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

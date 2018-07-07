@@ -15,8 +15,7 @@ router.get("/",async (req,res,next)=>{
     try{
         const name = req.query.name;
         const status = req.query.status;
-        const maxPrice = req.query.maxPrice;
-        const minPrice = req.query.minPrice || 0;
+        const price = req.query.price;
         const tags = req.query.tags;
         const skip = parseInt(req.query.skip);
         const limit = parseInt(req.query.limit);
@@ -25,16 +24,32 @@ router.get("/",async (req,res,next)=>{
         
         const filter = {};
         if(name){
-            filter.name=name;
+            filter.name= new RegExp('^' + name, "i");
         }
         if(status){
             filter.status = status;
         }
-        if(maxPrice){
-            filter.price = {$lte: maxPrice, $gte: minPrice};
-        }else{
-            filter.price = {$gte: minPrice};
+        if(price){
+            const lastIndex = price.lastIndexOf('-');
+            let lteValue;
+            let gteValue;
+            if(lastIndex===-1){
+                filter.price = price;
+            } else if (lastIndex===0){
+                lteValue = price.substring(1,price.length);
+                console.log(lteValue);
+                filter.price = {$lte: lteValue};
+            } else if (lastIndex===price.length-1){
+                gteValue = price.substring(0,price.length-1);
+                filter.price = {$gte: gteValue};
+            } else{
+                gteValue = price.substring(0,lastIndex);
+                lteValue = price.substring(lastIndex+1, price.length);
+                filter.price = {$lte : lteValue, $gte : gteValue};
+            }
+
         }
+            
         
         if(tags){
             filter.tags =tags;

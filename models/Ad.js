@@ -28,8 +28,6 @@ adSchema.statics.getTags= function (){
 };
 
 
-
-
 //creamos el modelo
 const Ad = mongoose.model('Ad',adSchema);
 

@@ -2,6 +2,8 @@
 
 const mongoose = require ('mongoose');
 
+const tags = ['work','lifestyle','motor','mobile']
+
 //primero definimos un esquema
 
 const adSchema = mongoose.Schema({
@@ -9,7 +11,7 @@ const adSchema = mongoose.Schema({
     status: {type: String, enum: ['sell', 'search']},
     price : Number,
     photo: String,
-    tags: {type: [String], enum: ['work','lifestyle','motor','mobile']}
+    tags: {type: [String], enum: tags}
 }); 
 
 adSchema.statics.list= function (filter,skip,limit,fields,sort){
@@ -19,6 +21,10 @@ adSchema.statics.list= function (filter,skip,limit,fields,sort){
     query.select(fields);
     query.sort(sort);
     return query.exec();
+};
+
+adSchema.statics.getTags= function (){
+    return tags;   
 };
 
 

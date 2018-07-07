@@ -48,9 +48,7 @@ router.get("/",async (req,res,next)=>{
                 filter.price = {$lte : lteValue, $gte : gteValue};
             }
 
-        }
-            
-        
+        }   
         if(tags){
             filter.tags =tags;
         }
@@ -61,6 +59,15 @@ router.get("/",async (req,res,next)=>{
     }catch(err){
         next(err);
     }   
+});
+
+
+
+
+router.get("/tags",async (req,res,next)=>{
+        const tags = Ad.getTags();
+        res.json({ succes: true, result: tags});
+      
 });
 
 module.exports = router;

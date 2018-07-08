@@ -2,7 +2,7 @@
 
 const mongoose = require ('mongoose');
 
-const tags = ['work','lifestyle','motor','mobile'];
+const tags = ['work','lifestyle','motor','mobile']
 
 //primero definimos un esquema
 

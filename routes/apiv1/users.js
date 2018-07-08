@@ -3,11 +3,27 @@
 const express = require ('express');
 const router = express.Router();
 const jwt = require ('jsonwebtoken');
+const crypto = require ('crypto');
 const localConfig = require ('../../localConfig');
 const User = require('../../models/User');
 
+router.post('/addUser',async (req,res,next)=>{
+    console.log(req.body);
+    try{
+        if(req.body.password){
+            req.body.password=crypto.createHash('sha256').update(req.body.password).digest('base64');
+        } 
+        const user = new User(req.body);
+        const savedUser= await user.save();
+        res.json({succes: true, result:savedUser});
 
-router.post("/login",async (req,res,next)=>{
+    }catch (error){
+        next(error);
+    }
+})
+
+
+router.post('/login',async (req,res,next)=>{
  try{
    
     const email = req.body.email;
@@ -22,7 +38,8 @@ router.post("/login",async (req,res,next)=>{
 
 
     //si la password esta bien creamos JWT
-    if(password !== user.password){
+   
+    if( user.validatePassword(user.password,password)){
         res.json({success: true, message : 'invalid credentials'});
         return;
     }

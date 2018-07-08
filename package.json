@@ -5,6 +5,7 @@
   "scripts": {
     "start": "node ./bin/www",
     "dev": "cross-env DEBUG=Nodepop:* nodemon ./bin/www ",
+    "cluster": "node ./bin/cluster",
     "install_db": "node ./bin/installDb"
   },
   "dependencies": {
@@ -13,6 +14,7 @@
     "cross-env": "^5.2.0",
     "debug": "~2.6.9",
     "ejs": "~2.5.7",
+    "eslint": "^5.0.1",
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
     "i18n": "^0.8.3",

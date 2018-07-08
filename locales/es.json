@@ -1,5 +1,8 @@
 {
 	"no token provided": "no se ha indicado ningún token de autentificación",
 	"Not Found": "No encontrado",
-	"jwt malformed": "jwt no correcto"
+	"jwt malformed": "jwt no correcto",
+	"password is not defined": "contraseña no definida",
+	"User validation failed: password: Path `password` is required., email: Path `email` is required., name: Path `name` is required.": "Validación de usuario fallida: password: El campo 'password' es requerido., email: El campo 'email' es requerido., name: el campo `name` es requerido."
+	
 }

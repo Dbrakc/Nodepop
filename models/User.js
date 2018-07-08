@@ -13,9 +13,8 @@ const userSchema = mongoose.Schema({
 
 userSchema.methods.validatePassword = function (userHashedPassword, newPassword){
     const newPaswordHashed =  crypto.createHash('sha256',newPassword,'base64');
-    console.log(newPaswordHashed);
     return newPaswordHashed === userHashedPassword;
-}
+};
 
 //creamos el modelo
 const User = mongoose.model('User',userSchema);

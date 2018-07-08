@@ -7,11 +7,6 @@ const jwtAuth = require ('../../lib/jwt-auth');
 
 
 router.get("/",jwtAuth(),async (req,res,next)=>{
-    /*name : String,
-    status: {type: String, enum: ['sell', 'search']},
-    price : Number,
-    photo: String,
-    tags: {type: [String], enum: ['work','lifestyle','motor','mobile']}*/
     try{
         const name = req.query.name;
         const status = req.query.status;

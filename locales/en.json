@@ -3,10 +3,5 @@
 	"Not Found": "Not Found",
 	"jwt malformed": "jwt malformed",
 	"password is not defined": "password is not defined",
-	"User validation failed: password: Path `password` is required., email: Path `email` is required., name: Path `name` is required.": "User validation failed: password: Path `password` is required., email: Path `email` is required., name: Path `name` is required.",
-	"Cannot read property 'body' of undefined": "Cannot read property 'body' of undefined",
-	"IV must be a buffer": "IV must be a buffer",
-	"Unknown cipher": "Unknown cipher",
-	"data is not defined": "data is not defined",
-	"user is not defined": "user is not defined"
+	"User validation failed: password: Path `password` is required., email: Path `email` is required., name: Path `name` is required.": "User validation failed: password: Path `password` is required., email: Path `email` is required., name: Path `name` is required."
 }

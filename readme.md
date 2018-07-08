@@ -24,7 +24,7 @@ This application uses MongoDB. To start MongoDB use:
 To introuce development data example use:
 
 ```shell
-npm run intall_db
+npm run install_db
 ```
 
 ## Development

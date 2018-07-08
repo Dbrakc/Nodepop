@@ -1,0 +1,5 @@
+{
+	"no token provided": "no se ha indicado ningún token de autentificación",
+	"Not Found": "No encontrado",
+	"jwt malformed": "jwt malformed"
+}

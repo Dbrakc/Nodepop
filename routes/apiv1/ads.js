@@ -2,11 +2,11 @@
 
 const express = require ('express');
 const router = express.Router();
-
 const Ad = require('../../models/Ad');
+const jwtAuth = require ('../../lib/jwt-auth');
 
 
-router.get("/",async (req,res,next)=>{
+router.get("/",jwtAuth(),async (req,res,next)=>{
     /*name : String,
     status: {type: String, enum: ['sell', 'search']},
     price : Number,
@@ -52,8 +52,6 @@ router.get("/",async (req,res,next)=>{
         if(tags){
             filter.tags =tags;
         }
-
-
         const ads = await Ad.list(filter,skip,limit,fields,sort);
         res.json({ succes: true, result: ads});
     }catch(err){
@@ -64,10 +62,10 @@ router.get("/",async (req,res,next)=>{
 
 
 
-router.get("/tags",async (req,res,next)=>{
+router.get("/tags",jwtAuth(),async (req,res,next)=>{
         const tags = Ad.getTags();
         res.json({ succes: true, result: tags});
-      
+    
 });
 
 module.exports = router;

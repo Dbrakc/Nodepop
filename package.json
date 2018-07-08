@@ -6,7 +6,8 @@
     "start": "node ./bin/www",
     "dev": "cross-env DEBUG=Nodepop:* nodemon ./bin/www ",
     "cluster": "node ./bin/cluster",
-    "install_db": "node ./bin/installDb"
+    "install_db": "node ./bin/installDb",
+    "clean_code" : "./node_modules/.bin/eslint ./"
   },
   "dependencies": {
     "async": "^2.6.1",

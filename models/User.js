@@ -7,8 +7,8 @@ const crypto = require ('crypto');
 
 const userSchema = mongoose.Schema({
     name: {type: String, required:true},
-    email : {type: String, unique:true, required:true},
-    password : {type: String, unique:true, required: true}
+    email : {type: String, unique:true, index:true, required:true},
+    password : {type: String, required: true}
 }); 
 
 userSchema.methods.validatePassword = function (userHashedPassword, newPassword){

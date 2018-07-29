@@ -32,7 +32,7 @@ require('./lib/connectMongoose');
 
 
 app.use(logger('dev'));
-app.use(.json());
+app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(i18n.init);

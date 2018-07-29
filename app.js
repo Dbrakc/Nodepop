@@ -32,7 +32,7 @@ require('./lib/connectMongoose');
 
 
 app.use(logger('dev'));
-app.use(express.json());
+app.use(.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(i18n.init);
@@ -42,7 +42,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', require('./routes/index'));
 app.use('/users', require('./routes/users'));
 app.use('/apiv1/ads', require('./routes/apiv1/ads'));
-app.use('/apiV1/users',require('./routes/apiv1/users'));
+app.use('/apiv1/users',require('./routes/apiv1/users'));
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

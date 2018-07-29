@@ -4,9 +4,19 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var i18n = require('i18n');
+let dotenv = require('dotenv');
+const result = dotenv.config();
+ 
+if (result.error) {
+  throw result.error;
+}
+ 
+console.log(result.parsed);
+
 
 
 var app = express();
+
 
 i18n.configure({
   locales:['en', 'es'],

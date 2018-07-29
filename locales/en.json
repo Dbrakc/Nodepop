@@ -3,5 +3,6 @@
 	"Not Found": "Not Found",
 	"jwt malformed": "jwt malformed",
 	"password is not defined": "password is not defined",
-	"User validation failed: password: Path `password` is required., email: Path `email` is required., name: Path `name` is required.": "User validation failed: password: Path `password` is required., email: Path `email` is required., name: Path `name` is required."
+	"User validation failed: password: Path `password` is required., email: Path `email` is required., name: Path `name` is required.": "User validation failed: password: Path `password` is required., email: Path `email` is required., name: Path `name` is required.",
+	"E11000 duplicate key error collection: nodepop.users index: password_1 dup key: { : \"x7jCrImsD2S6LvRypGXErovEKt1LOo009SEGzgml90A=\" }": "E11000 duplicate key error collection: nodepop.users index: password_1 dup key: { : \"x7jCrImsD2S6LvRypGXErovEKt1LOo009SEGzgml90A=\" }"
 }

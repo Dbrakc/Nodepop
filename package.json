@@ -7,13 +7,14 @@
     "dev": "cross-env DEBUG=Nodepop:* nodemon ./bin/www ",
     "cluster": "node ./bin/cluster",
     "install_db": "node ./bin/installDb",
-    "clean_code" : "./node_modules/.bin/eslint ./"
+    "clean_code": "./node_modules/.bin/eslint ./"
   },
   "dependencies": {
     "async": "^2.6.1",
     "cookie-parser": "~1.4.3",
     "cross-env": "^5.2.0",
     "debug": "~2.6.9",
+    "dotenv": "^6.0.0",
     "ejs": "~2.5.7",
     "eslint": "^5.0.1",
     "express": "~4.16.0",

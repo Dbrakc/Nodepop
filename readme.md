@@ -1,5 +1,7 @@
 # Nodepop
 
+ip_servidor = 18.209.150.219
+
 ## Instalation
 
 Install dependencies with:

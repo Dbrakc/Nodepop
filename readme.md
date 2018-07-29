@@ -1,6 +1,6 @@
 # Nodepop
 
-ip_servidor = 18.209.150.219
+server_ip = 18.209.150.219
 
 ## Instalation
 

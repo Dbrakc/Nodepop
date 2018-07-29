@@ -48,7 +48,7 @@ npm run cluster
 To test clean code use:
 
 ```shell
-npm run clen_code
+npm run clean_code
 ```
 
 ## API Documentation
@@ -59,7 +59,7 @@ To create a user, please post:
 
 #### Request POST URL
 
-http://localhost:3000/apiv1/users/adUsers
+https://davidbragadeveloper.com/apiv1/users/addUser
 
 To introduce the user name, email and password (all required), you must introduce body, eg.:
 
@@ -94,7 +94,7 @@ To authenticate a user, please post:
 
 #### Request POST URL
 
-http://localhost:3000/apiv1/users/login
+https://davidbragadeveloper.com/apiv1/users/login
 
 To introduce the user email and password (all required), you must introduce body, eg.:
 
@@ -122,7 +122,7 @@ To query ads, please get:
 
 #### Request GET URL
 
-http://localhost:3000/apiv1/ads
+https://davidbragadeveloper.com/apiv1/ads
 
 To introduce parameters for a custom sort, you must introduce query parameters, eg.:
 
@@ -220,7 +220,7 @@ To query Tags of the Ads, please get:
 
 #### Request GET URL
 
-http://localhost:3000/apiv1/tags
+https://davidbragadeveloper.com/apiv1/tags
 
 
 #### Response example
@@ -241,7 +241,7 @@ http://localhost:3000/apiv1/tags
 
 To get images use:
 
-http://localhost:3000/images/fake_image.jpg
+https://davidbragadeveloper.com/images/fake_image.jpg
 
 
 
